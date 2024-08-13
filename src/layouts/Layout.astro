@@ -1,0 +1,41 @@
+---
+interface Props {
+	title: string;
+	description?: string;
+	image?: string;
+	empresa?: string;
+}
+
+const { title,description,image,empresa } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content="regalos, gifbox, graduacion" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+	
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content={empresa}>
+		<meta name="twitter:creator" content={empresa}>
+		<meta name="twitter:title" content={title}>
+		<meta name="twitter:description" content={description}>
+		<meta name="twitter:image" content={image}>
+
+		<meta name="og:description" content={description}>
+		<meta name="og:image" content={image}>
+		<meta property="og:site_name" content={empresa}>
+		<meta property="og:locale" content="es_LA">
+		<meta property="og:type" content="website">
+		<meta property="og:description" content={description}>
+
+		<title>{title}</title>
+	</head>
+	<body class="bg-orange-50">
+		<slot />
+	</body>
+</html>

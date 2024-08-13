@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const link = 'https://drive.google.com/file/d/1Kjp1izaXbnHftiV9PejcgBLzVEOtwYU_/view?usp=sharing'
+---
+
+<Layout title="Gifbox Graduación" description='Regalos para graduación' image='/portada.jpeg' empresa='Scrapnow Memory' >
+	<div class="container m-auto text-center flex flex-col items-center gap-y-6 pt-20 md:pt-10 px-4 md:max-w-xl text-red-950">
+		<img src="/logo_scrapnowMemory.svg" alt="logo scrapnow memory" class="size-36 rounded-full">
+		<div>
+			<h1 class="text-2xl font-medium"> ✨ Gifbox Graduación 🎓✨</h1>
+			<p class="mt-1">Celebra los logros de esa persona especial</p>
+		</div>
+		<a class="group p-2 px-6 border-2 border-red-100 hover:bg-red-100 transition-all ease-in-out duration-300 flex rounded-full w-full mx-4 gap-6 relative" href={link}>
+			<svg class="size-10 stroke-orange-950 group-hover:stroke-pink-950 transition-all ease-in-out duration-300" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M5 16L24 6L43 16L24 26L5 16Z"  stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M11 20V34.464C11 35.928 12.055 37.187 13.471 37.559C15.676 38.139 19.056 39.219 22.356 41.029C23.377 41.589 24.622 41.589 25.644 41.029C28.944 39.219 32.324 38.139 34.529 37.559C35.945 37.187 37 35.93 37 34.464V20"  stroke-width="4" stroke-linejoin="round"/>
+				<path d="M43 16V32" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+				
+			<span class="flex self-center right-0 left-0 justify-center absolute group-hover:stroke-pink-950 transition-all ease-in-out duration-300">Ver Catálogo</span>
+		</a>
+	</div>
+</Layout>
