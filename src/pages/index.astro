@@ -1,21 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const link = 'https://drive.google.com/file/d/1Kjp1izaXbnHftiV9PejcgBLzVEOtwYU_/view?usp=sharing'
+const meta ={
+	title: 'Box BRIDE💍',
+	description: 'Aquí encontrarás Box de Regalo para tus Damas de Honor, para Novias, celebrar a Parejas que se han comprometido y más 🤍',
+	image: '/portada.jpeg',
+	empresa: 'Scrapnow Memory',
+	link: 'https://drive.google.com/file/d/1yzH7x5RYkNyyw4tPzCll63053xh-oXm4/view?usp=sharing'
+}
+
+const {title, description, image, empresa, link} = meta;
 ---
 
-<Layout title="Gifbox Graduación" description='Regalos para graduación' image='/portada.jpeg' empresa='Scrapnow Memory' >
+<Layout {title} {description} {image} {empresa} >
 	<div class="container m-auto text-center flex flex-col items-center gap-y-6 pt-20 md:pt-10 px-4 md:max-w-xl text-red-950">
 		<img src="/logo_scrapnowMemory.svg" alt="logo scrapnow memory" class="size-36 rounded-full">
 		<div>
-			<h1 class="text-2xl font-medium"> ✨ Gifbox Graduación 🎓✨</h1>
-			<p class="mt-1">Celebra los logros de esa persona especial</p>
+			<h1 class="text-2xl font-medium"> ✨ {title} ✨</h1>
+			<p class="mt-1">{description}</p>
 		</div>
-		<a class="group p-2 px-6 border-2 border-red-100 hover:bg-red-100 transition-all ease-in-out duration-300 flex rounded-full w-full mx-4 gap-6 relative" href={link}>
-			<svg class="size-10 stroke-orange-950 group-hover:stroke-pink-950 transition-all ease-in-out duration-300" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M5 16L24 6L43 16L24 26L5 16Z"  stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-				<path d="M11 20V34.464C11 35.928 12.055 37.187 13.471 37.559C15.676 38.139 19.056 39.219 22.356 41.029C23.377 41.589 24.622 41.589 25.644 41.029C28.944 39.219 32.324 38.139 34.529 37.559C35.945 37.187 37 35.93 37 34.464V20"  stroke-width="4" stroke-linejoin="round"/>
-				<path d="M43 16V32" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+		<a class=" min-h-10 group p-2 px-6 border-2 border-red-100 hover:bg-red-100 transition-all ease-in-out duration-300 flex rounded-full w-full mx-4 gap-6 relative" href={link}>
+			<!-- class="size-10 stroke-orange-950 group-hover:stroke-pink-950 transition-all ease-in-out duration-300" -->
+			<svg class="size-10 fill-orange-950 group-hover:fill-pink-950 transition-all ease-in-out duration-300"  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M12 10L8 4.4L9.6 2H14.4L16 4.4L12 10ZM15.5 6.8L14.3 8.5C16.5 9.4 18 11.5 18 14C18 15.5913 17.3679 17.1174 16.2426 18.2426C15.1174 19.3679 13.5913 20 12 20C10.4087 20 8.88258 19.3679 7.75736 18.2426C6.63214 17.1174 6 15.5913 6 14C6 11.5 7.5 9.4 9.7 8.5L8.5 6.8C5.8 8.1 4 10.8 4 14C4 16.1217 4.84285 18.1566 6.34315 19.6569C7.84344 21.1571 9.87827 22 12 22C14.1217 22 16.1566 21.1571 17.6569 19.6569C19.1571 18.1566 20 16.1217 20 14C20 10.8 18.2 8.1 15.5 6.8Z"/>
 				</svg>
 				
 			<span class="flex self-center right-0 left-0 justify-center absolute group-hover:stroke-pink-950 transition-all ease-in-out duration-300">Ver Catálogo</span>
